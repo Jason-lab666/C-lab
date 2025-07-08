@@ -3,7 +3,6 @@ import random
 
 pygame.init()
 screen = pygame.display.set_mode((600, 400))
-pygame.display.set_caption("Spaceship")
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -11,7 +10,7 @@ GREEN = (0, 255, 0)
 RED = (255, 0, 0)
 
 ship_x = 300
-ship_y = 350
+ship_y = 300
 bullets = []
 aliens = []
 
@@ -66,9 +65,7 @@ while running:
     for alien in aliens:
         pygame.draw.rect(screen, RED, (alien[0], alien[1], 50, 30))
     
-    font = pygame.font.SysFont(None, 36)
-    score_text = font.render(f"分数: {score}", True, WHITE)
-    screen.blit(score_text, (10, 10))
+    print(f"Current score: {score}")  
     
     pygame.display.update()
 
